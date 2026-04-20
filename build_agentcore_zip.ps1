@@ -33,7 +33,7 @@ $env:UV_LINK_MODE = "copy"
 
 uv pip install `
     --python-platform aarch64-manylinux2014 `
-    --python-version 3.14 `
+    --python-version 3.13 `
     --target $packageDir `
     --only-binary=:all: `
     -r $requirementsPath
