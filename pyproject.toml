@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "github-report-agent"
+version = "0.1.0"
+description = "GitHub Organization reporting agent"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+  "bedrock-agentcore",
+  "boto3",
+  "httpx",
+  "python-dotenv",
+  "PyYAML",
+  "strands-agents",
+  "tenacity",
+]
+
+[project.optional-dependencies]
+dev = [
+  "bedrock-agentcore-starter-toolkit",
+  "ruff",
+]
+ui = [
+  "streamlit",
+]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
